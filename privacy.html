@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Trainlog (MyoActive) privacy policy for iOS.">
+  <title>Trainlog (MyoActive) Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; --bg:#f6f7fb; --card:#fff; --text:#1d2433; --muted:#5c667a; --accent:#3458d8; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#111522; --card:#1b2130; --text:#f2f4fa; --muted:#b8c0d3; --accent:#9db0ff; } }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { max-width:820px; margin:0 auto; padding:48px 22px 72px; }
+    article { background:var(--card); border-radius:18px; padding:38px clamp(22px,5vw,58px); box-shadow:0 8px 30px rgba(20,30,60,.08); }
+    h1 { margin:0 0 8px; font-size:clamp(28px,5vw,40px); line-height:1.2; }
+    h2 { margin:34px 0 10px; font-size:22px; line-height:1.3; }
+    h3 { margin:24px 0 8px; font-size:18px; }
+    p, li { color:var(--text); }
+    .meta, .notice, footer { color:var(--muted); }
+    .meta { margin:0 0 24px; }
+    .notice { border-left:4px solid var(--accent); background:color-mix(in srgb, var(--accent) 10%, transparent); padding:14px 16px; border-radius:8px; }
+    a { color:var(--accent); }
+    footer { margin-top:38px; padding-top:18px; border-top:1px solid color-mix(in srgb, var(--muted) 28%, transparent); font-size:14px; }
+  </style>
+</head>
+<body>
+<main>
+<article>
+  <h1>Trainlog (MyoActive) Privacy Policy</h1>
+  <p class="meta"><strong>Version:</strong> 1.0 &nbsp;|&nbsp; <strong>Applies to:</strong> iOS 0.2.0 (Build 27)<br>
+  <strong>Effective date:</strong> 2026-08-18 &nbsp;|&nbsp; <strong>Developer/operator:</strong> QUNHUN ZHANG</p>
+
+  <p class="notice"><strong>Release note:</strong> This page is an engineering release draft based on the current iOS implementation. Before external TestFlight or App Store distribution, confirm the final data flows, retention periods, regional scope, and App Store privacy answers with the developer/operator and legal counsel. This page is not legal advice.</p>
+
+  <h2>1. What this policy covers</h2>
+  <p>Trainlog (engineering name MyoActive) is a local-first iOS app for strength training, running, cycling, recovery, plans, and exercise history. This policy describes how the current Build 27 handles workout records, health data, location, Bluetooth sensors, voice input, Apple Account, and optional services. Apple Health, Siri, Speech Recognition, App Store, TestFlight, Apple Account, and other Apple services are also governed by Apple’s own terms and privacy policies.</p>
+
+  <h2>2. Data processed by the current build</h2>
+  <h3>Workout and app data</h3>
+  <p>The app may store exercise names, target muscles, sets, reps, weight, RPE, tempo, rest intervals, notes, timestamps, activity type, weekly plans, recovery snapshots, exercise-library entries, and templates. These records are stored locally by default. You can export JSON or CSV; outdoor routes can be exported as GPX, TCX, or FIT.</p>
+
+  <h3>Apple Health / HealthKit</h3>
+  <p>Only after you enable the related feature and grant Apple’s permission, the app may read permitted heart rate, HRV, sleep, activity energy, VO₂ Max, cycle-related samples, and workout-time heart rate for training summaries, recovery views, and live metrics. When you allow writing, it may write completed workouts to Apple Health.</p>
+  <p>HealthKit data is not used for advertising, marketing, data brokerage, insurance pricing, unrelated profiling, or sale. You can revoke access in iPhone Settings or the Health app. Deleting a local Trainlog record does not automatically remove a record already written to Apple Health; manage those records in Apple Health.</p>
+
+  <h3>Location and outdoor routes</h3>
+  <p>When you start an outdoor activity that needs a route and grant location access, the app may record location for distance, speed, pace, route preview, auto-pause, and export. If background location is allowed, an already-started outdoor session can continue recording while the app is in the background. The app does not continuously record location when there is no active session.</p>
+  <p>Routes remain in local workout records. Export supports an approximate route option that reduces fine-grained location detail. Once you share an exported file, the recipient’s handling of it is outside this app’s control.</p>
+
+  <h3>Bluetooth fitness sensors</h3>
+  <p>After you enable Bluetooth devices and actively scan or connect, the app can use compatible heart-rate, cycling speed/cadence, and power sensors. It may process device name, system identifier, last connection time, heart rate, RR intervals, speed, cadence, counters, and power. Up to 100 redacted connection diagnostics are stored locally; raw Bluetooth packets are not retained.</p>
+
+  <h3>Microphone and speech recognition</h3>
+  <p>The app uses the microphone and speech recognition only after you start voice entry or a voice workout command. Raw audio is not saved as a workout record. A temporary transcript is used to parse a value or command; only values or text you confirm are saved to the relevant local workout record. Apple provides the speech-recognition service; whether audio is processed on-device or by Apple depends on your device, system settings, and Apple’s service terms.</p>
+
+  <h3>Siri and App Intents</h3>
+  <p>The app exposes system commands for starting, pausing, resuming, and ending workouts, configuring strength or running cues, and logging a set. iOS/Siri handles the command and the app receives the parameters needed to complete it. The app does not store Siri’s full audio.</p>
+
+  <h3>Apple Account, CloudKit, and subscriptions</h3>
+  <p>CloudKit is disabled in the current Build 27, so workout records are not uploaded to the app’s cloud by default. Apple Account sign-in is optional release-preparation code; if you sign in, the app stores only Apple’s stable user identifier in Keychain and does not persist the supplied name or email as workout data.</p>
+  <p>If subscriptions are configured, Apple handles payment, billing, and refunds. Trainlog receives product, verified transaction, and entitlement state through StoreKit and does not receive full payment-card details. Build 27 still requires account-side product and sandbox validation.</p>
+
+  <h3>Open-source components</h3>
+  <p>The current project includes local anatomy assets, Garmin FIT Swift SDK, and Apple Swift Collections. They support local anatomy display, FIT file processing, and local data structures. The current source contains no advertising, Firebase, Sentry, or behavior-analytics SDK. Notices and licenses are available in the app’s About and Open Source screen and in the project’s NOTICE file.</p>
+
+  <h2>3. Purposes and sharing</h2>
+  <p>Data is processed only to provide workout logging, plans, history, recovery views, live metrics, routes, sensor views, voice entry, Siri actions, user-requested exports, Apple Health sharing, and configured entitlements. The current build does not send workout data to the developer’s own server.</p>
+  <p>Only when you actively use the relevant Apple system feature may data be processed by Apple under Apple’s service rules, such as HealthKit, speech recognition, Siri, App Store transactions, or a future enabled CloudKit service. Unless you actively export or share a file, the app does not send workout records to coaches, social networks, or other third parties.</p>
+
+  <h2>4. Retention, deletion, and your choices</h2>
+  <ul>
+    <li>Local workout, exercise, template, recovery, and route records remain on the device until you delete them, clear app data, uninstall the app, or the system removes the app’s storage.</li>
+    <li>You can export JSON/CSV and route files before deletion, delete by category, clear Bluetooth diagnostics, or clear all local data in Settings → Privacy &amp; Data.</li>
+    <li>Revoking a permission blocks future access but does not automatically delete existing local records or Apple Health records.</li>
+    <li>Exported files are controlled by whoever stores or receives them.</li>
+  </ul>
+
+  <h2>5. Security</h2>
+  <p>The app uses iOS local storage and Keychain where appropriate and keeps the core workout experience local-first. No security measure can guarantee absolute protection. Keep your device, passcode, exported files, and Apple account secure.</p>
+
+  <h2>6. Children and health disclaimer</h2>
+  <p>Trainlog is not directed to children and is not intended to collect children’s personal data. The app provides fitness logging and informational prompts, not medical advice, diagnosis, treatment, or emergency monitoring. Stop exercising and seek appropriate professional help if you experience pain, injury, or concerning symptoms.</p>
+
+  <h2>7. Contact and policy changes</h2>
+  <p>Privacy questions or requests should be sent to the public privacy contact below:</p>
+  <p><strong>Privacy contact:</strong> <a href="mailto:lukzqh@gmail.com">lukzqh@gmail.com</a></p>
+  <p>We may update this policy when data flows, features, legal requirements, or service providers change. The version and effective date at the top of this page will be updated when a new policy takes effect.</p>
+
+  <footer>Trainlog (MyoActive) · Privacy Policy v1.0 · Current build 0.2.0 (27)</footer>
+</article>
+</main>
+</body>
+</html>
