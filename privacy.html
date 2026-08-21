@@ -27,13 +27,13 @@
 <main>
 <article>
   <h1>Trainlog Privacy Policy</h1>
-  <p class="meta"><strong>Version:</strong> 1.0 &nbsp;|&nbsp; <strong>Applies to:</strong> iOS 0.2.0 (Build 27)<br>
-  <strong>Effective date:</strong> 2026-08-18 &nbsp;|&nbsp; <strong>Developer/operator:</strong> QUNHUN ZHANG</p>
+  <p class="meta"><strong>Version:</strong> 1.1 &nbsp;|&nbsp; <strong>Applies to:</strong> iOS 1.0.2 (Build 35)<br>
+  <strong>Effective date:</strong> 2026-08-21 &nbsp;|&nbsp; <strong>Developer/operator:</strong> QUNHUN ZHANG</p>
 
-  <p class="notice"><strong>Release note:</strong> This page is an engineering release draft based on the current iOS implementation. Before external TestFlight or App Store distribution, confirm the final data flows, retention periods, regional scope, and App Store privacy answers with the developer/operator and legal counsel. This page is not legal advice.</p>
+  <p class="notice"><strong>Release note:</strong> This policy describes the data flows implemented for iOS 1.0.2 (Build 35). Apple App Store, TestFlight, Apple Account, Health, Siri, Speech Recognition, and other Apple services are also governed by Apple’s own terms and privacy policies. This page is not legal advice.</p>
 
   <h2>1. What this policy covers</h2>
-  <p>Trainlog is a local-first iOS app for strength training, running, cycling, recovery, plans, and exercise history. This policy describes how the current Build 27 handles workout records, health data, location, Bluetooth sensors, voice input, Apple Account, and optional services. Apple Health, Siri, Speech Recognition, App Store, TestFlight, Apple Account, and other Apple services are also governed by Apple’s own terms and privacy policies.</p>
+  <p>Trainlog is a local-first iOS app for strength training, running, cycling, recovery, plans, and exercise history. This policy describes how iOS 1.0.2 (Build 35) handles workout records, health data, location, Bluetooth sensors, voice input, Apple Account, subscriptions, and optional services.</p>
 
   <h2>2. Data processed by the current build</h2>
   <h3>Workout and app data</h3>
@@ -57,8 +57,11 @@
   <p>The app exposes system commands for starting, pausing, resuming, and ending workouts, configuring strength or running cues, and logging a set. iOS/Siri handles the command and the app receives the parameters needed to complete it. The app does not store Siri’s full audio.</p>
 
   <h3>Apple Account, CloudKit, and subscriptions</h3>
-  <p>CloudKit is disabled in the current Build 27, so workout records are not uploaded to the app’s cloud by default. Apple Account sign-in is optional release-preparation code; if you sign in, the app stores only Apple’s stable user identifier in Keychain and does not persist the supplied name or email as workout data.</p>
-  <p>If subscriptions are configured, Apple handles payment, billing, and refunds. Trainlog receives product, verified transaction, and entitlement state through StoreKit and does not receive full payment-card details. Build 27 still requires account-side product and sandbox validation.</p>
+  <p>CloudKit is disabled in Build 35, so workout records are not uploaded to the app’s cloud by default. Apple Account sign-in is optional; if you sign in, the app stores only Apple’s stable user identifier in Keychain and does not persist the supplied name or email as workout data.</p>
+  <p>For monthly, annual, or lifetime purchases, Apple handles payment, billing, subscription renewal, restoration, management, and refunds. Trainlog receives only the product, verified transaction, and entitlement state through StoreKit and does not receive full payment-card details. You can manage subscriptions through your Apple account and request refunds through Apple’s reportaproblem.apple.com service.</p>
+
+  <h3>Watch, widgets, and Live Activities</h3>
+  <p>Watch connectivity, widgets, and Live Activities receive only the workout plan or active-session information needed to show and control the feature you start. When no Watch or other wearable is connected, the core iPhone recording and manual-completion flow remains available. The app does not use Watch data for advertising or sell it.</p>
 
   <h3>Open-source components</h3>
   <p>The current project includes local anatomy assets, Garmin FIT Swift SDK, and Apple Swift Collections. They support local anatomy display, FIT file processing, and local data structures. The current source contains no advertising, Firebase, Sentry, or behavior-analytics SDK. Notices and licenses are available in the app’s About and Open Source screen and in the project’s NOTICE file.</p>
@@ -86,7 +89,7 @@
   <p><strong>Privacy contact:</strong> <a href="mailto:lukzqh@gmail.com">lukzqh@gmail.com</a></p>
   <p>We may update this policy when data flows, features, legal requirements, or service providers change. The version and effective date at the top of this page will be updated when a new policy takes effect.</p>
 
-  <footer>Trainlog · Privacy Policy v1.0 · Current build 0.2.0 (27)</footer>
+  <footer>Trainlog · Privacy Policy v1.1 · Current build 1.0.2 (35)</footer>
 </article>
 </main>
 </body>
